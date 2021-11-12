@@ -1,5 +1,5 @@
 # wppBotFigurinhas
-um bot para whatsapp simples para criar figurinhas de fotos/videos/gifs - funcionando direto no heroku usando VenomBot
+um bot simples para whatsapp com a função de criar figurinhas de fotos/videos/gifs - funcionando direto no heroku usando VenomBot (já funciona com o whatsapp multi devices, então não é necessário que seu celular esteja sempre online para o bot funcionar 😉) 
 
 
 ## modo de uso:
