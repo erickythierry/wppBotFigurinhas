@@ -1,0 +1,32 @@
+{
+    "name": "Bot Figurinhas para whatsapp",
+    "description": "um script simples para bot que faz figurinhas no whatsapp",
+    "logo": "",
+    "keywords": ["whatsapp", "bot", "api", "venombot"],
+    "repository": "https://github.com/erickythierry",
+    "success_url": "/",
+    
+    "addons": [ "rediscloud:30" ],
+    
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "free"
+        },
+        "worker":{
+            "quantity": 1,
+            "size": "free"
+        }
+      },
+    "buildpacks": [
+    {
+        "url": "heroku/nodejs"
+    },
+    {
+        "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    },
+    {
+        "url": "https://github.com/jontewks/puppeteer-heroku-buildpack"
+    }
+    ]
+  }

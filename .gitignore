@@ -1,0 +1,13 @@
+node_modules
+.idea
+**/*.jpg
+**/*.jpeg
+**/*.mp4
+**/*.mp3
+**/*.webp
+**/*.png
+testes.js
+testes2.js
+package-lock.json
+redis.js
+push to heroku git.bat
