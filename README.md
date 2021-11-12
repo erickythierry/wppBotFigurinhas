@@ -7,12 +7,10 @@ um bot para whatsapp simples para criar figurinhas de fotos/videos/gifs - funcio
 
 \
 \
-\
 
 ### 2 clique no botão a baixo para criar seu bot no heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/erickythierry/wppBotFigurinhas/tree/main)
 
-\
 \
 \
 
@@ -22,7 +20,6 @@ um bot para whatsapp simples para criar figurinhas de fotos/videos/gifs - funcio
 
 \
 \
-\
 
 ### 4 Aguarde o deploy finalizar
 ![alt text](https://github.com/erickythierry/wppBotFigurinhas/blob/43f96bd590f91665aecda502031b1500b92a857b/tutorial/deploy.jpg)
@@ -30,12 +27,10 @@ um bot para whatsapp simples para criar figurinhas de fotos/videos/gifs - funcio
 
 \
 \
-\
 
 ### 5 Após o deploy finalizar, clique no botão View
 ![alt text](https://github.com/erickythierry/wppBotFigurinhas/blob/43f96bd590f91665aecda502031b1500b92a857b/tutorial/deploy-finished.jpg)
 
-\
 \
 \
 
