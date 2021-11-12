@@ -57,6 +57,7 @@ um bot para whatsapp simples para criar figurinhas de fotos/videos/gifs - funcio
 &nbsp;
 
 ## Avisos e indicações:
+- **caso o seu bot venha a reiniciar sozinho, será necessário que você leia novamente o Código QR do bot na página de login dele (item 6 do tutorial acima), pois quando o bot reinicia ele perde a sessão de login.**
 - Esse projeto é **livre**, você pode usar a voltade, mas **cuidado com abusos**
 - O whatsapp não é muito amigavel com bots não oficiais, use com moderação para não levar ban em seu numero
 - Como dito acima, esse projeto foi pensado para um uso **leve de poucas pessoas**, caso seja aplicado um uso extremo, pode ficar **lento ou travar**
