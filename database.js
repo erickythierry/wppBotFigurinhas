@@ -5,7 +5,7 @@
 
 const redis = require("async-redis");
 var url = require('url');
-var redisURL = new url.URL(process.env.REDIS_URL);
+var redisURL = new url.URL(process.env.REDISCLOUD_URL);
 
 const client = redis.createClient({
     host: redisURL.hostname,
