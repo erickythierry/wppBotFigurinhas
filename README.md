@@ -39,7 +39,7 @@ um bot para whatsapp simples para criar figurinhas de fotos/videos/gifs - funcio
 \
 &nbsp;
 
-### 5 Após o deploy finalizar, clique no botão View
+### 5 Após o deploy finalizar, clique no botão **View**
 ![alt text](https://github.com/erickythierry/wppBotFigurinhas/blob/43f96bd590f91665aecda502031b1500b92a857b/tutorial/deploy-finished.jpg)
 
 \
