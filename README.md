@@ -48,7 +48,8 @@ um bot simples para whatsapp com a função de criar figurinhas de fotos/videos/
 &nbsp;
 
 ### 6 Abrirá a Homepage do app para você logar no seu Bot
-- É semelhante ao Whatsapp Web, escaneie os **2 codigos QR** que irão aparecer, após isso o bot já estará logado no seu Whatsapp
+- É semelhante ao Whatsapp Web, escaneie os **2 codigos QR** que irão aparecer (pode demorar até 30s para o qrcode aparecer) 
+- Após você escanear, o bot já estará ligado no whatsapp que você conectou!
 ![alt text](https://github.com/erickythierry/wppBotFigurinhas/blob/43f96bd590f91665aecda502031b1500b92a857b/tutorial/homepage.jpg)
 
 \
