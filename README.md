@@ -50,4 +50,18 @@ um bot para whatsapp simples para criar figurinhas de fotos/videos/gifs - funcio
 - É semelhante ao Whatsapp Web, escaneie os 2 codigos QR que irão aparecer, após isso o bot já estará logado no seu Whatsapp
 ![alt text](https://github.com/erickythierry/wppBotFigurinhas/blob/43f96bd590f91665aecda502031b1500b92a857b/tutorial/homepage.jpg)
 
+\
+&nbsp;
+\
+&nbsp;
 
+## Avisos e indicações:
+- Esse projeto é livre, você pode usar a voltade, mas cuidado com abusos
+- O whatsapp não é muito amigavel com bots não oficiais, use com moderação para não levar ban em seu numero
+- Como dito acima, esse projeto foi pensado para um uso leve de poucas pessoas, caso seja aplicado um uso extremo, pode ficar lento ou travar
+- esse projeto está em BETA, então não espere algo incrivel.
+ ### não me responsabilizo por problemas que você venha a ter com esse bot, em meu uso cotidiano não tive problemas, então use por conta própria
+
+ #### fique a vontade para analizar o codigo e modificar, o bot é bem básico e simplificado
+
+ ## um agradecimento ao projeto Venom por permitir que esse bot seja viável
