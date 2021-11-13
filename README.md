@@ -1,5 +1,5 @@
 # wppBotFigurinhas
-um bot simples para whatsapp com a função de criar figurinhas de fotos/videos/gifs - funcionando direto no heroku usando VenomBot (já funciona com o whatsapp multi devices, então não é necessário que seu celular esteja sempre online para o bot funcionar 😉) 
+um bot para whatsapp simples para criar figurinhas de fotos/videos/gifs - funcionando direto no heroku usando VenomBot
 
 
 ## modo de uso:
@@ -48,8 +48,7 @@ um bot simples para whatsapp com a função de criar figurinhas de fotos/videos/
 &nbsp;
 
 ### 6 Abrirá a Homepage do app para você logar no seu Bot
-- É semelhante ao Whatsapp Web, escaneie os **2 codigos QR** que irão aparecer (pode demorar até 30s para o qrcode aparecer) 
-- Após você escanear, o bot já estará ligado no whatsapp que você conectou!
+- É semelhante ao Whatsapp Web, escaneie os **2 codigos QR** que irão aparecer, após isso o bot já estará logado no seu Whatsapp
 ![alt text](https://github.com/erickythierry/wppBotFigurinhas/blob/43f96bd590f91665aecda502031b1500b92a857b/tutorial/homepage.jpg)
 
 \
@@ -58,7 +57,6 @@ um bot simples para whatsapp com a função de criar figurinhas de fotos/videos/
 &nbsp;
 
 ## Avisos e indicações:
-#### **caso o seu bot venha a reiniciar sozinho (por ter travado ou crashado), será necessário que você leia novamente o Código QR do bot na página de login dele (item 6 do tutorial acima), pois quando o bot reinicia ele perde a sessão de login.**
 - Esse projeto é **livre**, você pode usar a voltade, mas **cuidado com abusos**
 - O whatsapp não é muito amigavel com bots não oficiais, use com moderação para não levar ban em seu numero
 - Como dito acima, esse projeto foi pensado para um uso **leve de poucas pessoas**, caso seja aplicado um uso extremo, pode ficar **lento ou travar**

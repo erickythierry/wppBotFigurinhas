@@ -3,18 +3,59 @@
 // ########################## github: https://github.com/erickythierry #############################
 // #################################################################################################
 
+const express = require('express')
+const path = require('path')
 const venom = require('venom-bot');
 const fs = require('fs');
 const mime = require('mime-types');
 const ffmpeg = require('fluent-ffmpeg')
-const db = require("./database")
+//const db = require("./database")
 
+//anti sleep heroku
+require('heroku-self-ping').default("https://meubotteste.herokuapp.com");
 
-db.redisset('isLogged', false)
-.then(async () =>{
-        await db.redisset('error', false)
-        await db.redisset('qrcode', false)
+let status = {"isLogged": false, "error": false, "qrcode": null}
+
+const app = express()
+const porta = process.env.PORT || 3000
+
+app.use(express.static(__dirname + '/web'))
+app.listen(porta, '0.0.0.0', function(){
+    console.log("Listening on port ", porta)
+    if (porta==3000){console.log('http://localhost:3000')}
+});
+
+app.get('/', function(req, res){
+    res.sendFile(path.join(__dirname, '/web/index.html'))
 })
+
+app.get('/status', async function(req, res){
+    res.json(await checa())
+})
+
+async function checa(){
+    
+    return status
+    
+    
+    // var isLogged = await db.redisget('isLogged')
+    // isLogged = (!isLogged) ? false : (isLogged=='true' || isLogged==true) ? true : false
+    // var error = await db.redisget('error')
+    // error = (!error) ? false : (error=='true' || error==true) ? true : false
+    // var qrcode = await db.redisget('qrcode')
+    // qrcode = (qrcode=="false") ? null : qrcode
+    // return {"isLogged": isLogged, "error": error, "qrcode": qrcode}
+    //fileJson = JSON.parse(fs.readFileSync(file, 'utf8'));
+    //return fileJson
+    
+}
+
+
+// db.redisset('isLogged', false)
+// .then(async () =>{
+//         await db.redisset('error', false)
+//         await db.redisset('qrcode', false)
+// })
 
 
 const getRandom = (ext) => {return `${Math.floor(Math.random() * 1000000)}${ext}`}
@@ -34,7 +75,9 @@ venom
   },
   (base64Qrimg) => {
     console.log('qrcode base64 gerado');
-    db.redisset('qrcode', base64Qrimg)
+    status.qrcode = base64Qrimg
+    
+    //db.redisset('qrcode', base64Qrimg)
     // fileJson = JSON.parse(fs.readFileSync("status.json", 'utf8'))
     // fileJson.qrcode = base64Qrimg
     // fs.writeFileSync("status.json", (JSON.stringify(fileJson, null, 2)))
@@ -42,17 +85,24 @@ venom
   (statusSession) => {
     console.log('Status Session: ', statusSession); //return isLogged || notLogged || browserClose || qrReadSuccess || qrReadFail || autocloseCalled || desconnectedMobile || deleteToken || chatsAvailable || deviceNotConnected || serverWssNotConnected || noOpenBrowser
     if(statusSession=='browserClose' || statusSession=='autocloseCalled' || statusSession=='qrReadFail' || statusSession=='noOpenBrowser'){
-        db.redisset('error', true)
-        db.redisset('qrcode', false)
+        
+        status.error = true
+        status.qrcode = null
+        // db.redisset('error', true)
+        //db.redisset('qrcode', false)
         // fileJson = JSON.parse(fs.readFileSync("status.json", 'utf8'))
         // fileJson.error = true
         // fileJson.qrcode = null
         // fs.writeFileSync("status.json", (JSON.stringify(fileJson, null, 2)))
 
     }else if(statusSession=='isLogged' || statusSession=='qrReadSuccess' || statusSession=='chatsAvailable'){
-        db.redisset('isLogged', true)
-        db.redisset('error', false)
-        db.redisset('qrcode', false)
+        
+        status.isLogged = true
+        status.error = false
+        status.qrcode = null
+        // db.redisset('isLogged', true)
+        // db.redisset('error', false)
+        // db.redisset('qrcode', false)
         // fileJson = JSON.parse(fs.readFileSync("status.json", 'utf8'))
         // fileJson.error = false
         // fileJson.qrcode = null
@@ -63,8 +113,11 @@ venom
   .then((client) => start(client))
   .catch((erro) => {
     console.log(erro);
-    db.redisset('error', true)
-    db.redisset('qrcode', false)
+    
+    status.error = true
+    status.qrcode = null
+    // db.redisset('error', true)
+    // db.redisset('qrcode', false)
     // fileJson = JSON.parse(fs.readFileSync("status.json", 'utf8'))
     // fileJson.error = true
     // fileJson.qrcode = null
@@ -76,7 +129,7 @@ function start(client) {
     console.log(message)
     if (message.body === '/status') {
       client
-        .sendText(message.from, 'bot on!')
+        .sendText(message.from, 'bot funcionando! \n envie uma foto com a legenda */sticker* para eu fazer uma figurinha')
         .then((result) => {
           console.log('Result: ', result); //return object success
         })
